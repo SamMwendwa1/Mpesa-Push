@@ -1,13 +1,13 @@
 <?php
   date_default_timezone_set('Africa/Nairobi');
 
-  $consumerKey = '657TuL368cE3rfTvlYyFANwBgVu2tfuj'; //Fill with your app Consumer Key
-  $consumerSecret = 'b0lUjGuFT98WtcfQ'; // Fill with your app Secr
+  $consumerKey = ''; //Fill with your app Consumer Key
+  $consumerSecret = ''; // Fill with your app Secr
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $BusinessShortCode = '174379';
-  $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
+  $BusinessShortCode = '';
+  $Passkey = '';  
   
   /*
     This are your info, for
@@ -34,11 +34,11 @@
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+  $access_token_url = '';
+  $initiate_url = '';
 
   # callback url
-  $CallBackURL = 'https://academicscholars4hire.com/callback_url.php';  
+  $CallBackURL = '';  
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -53,11 +53,11 @@
 
 #start of register
 
-$url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
+$url = '';
 
 	/* This two files are provided in the project. */
-	$confirmationUrl = 'https://academicscholars4hire.com/confirmation_url.php'; // path to your confirmation url. can be IP address that is publicly accessible or a url
-	$validationUrl = 'https://academicscholars4hire.com/validation_url.php'; // path to your validation url. can be IP address that is publicly accessible or a url
+	$confirmationUrl = ''; // path to your confirmation url. can be IP address that is publicly accessible or a url
+	$validationUrl = ''; // path to your validation url. can be IP address that is publicly accessible or a url
 
        
  $curl = curl_init();
@@ -151,11 +151,11 @@ $url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
     
  if ($response['ResultCode']==0){
     //You need to redirect
-    header("Location: https://academicscholars4hire.com/about.html"); /* Redirect browser */
+    header(""); /* Redirect browser */
     exit();
    }
   else{
-    header("location: https://academicscholars4hire.com/index.php");
+    header("");
   }
   
   echo 

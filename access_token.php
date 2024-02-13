@@ -2,13 +2,13 @@
 
 //---------------------step1--------------
 //-------------------Access token---------
-$consumerKey = '657TuL368cE3rfTvlYyFANwBgVu2tfuj'; //Fill with your app Consumer Key
- $consumerSecret = 'b0lUjGuFT98WtcfQ'; // Fill with your app Secret
+$consumerKey = ''; //Fill with your app Consumer Key
+ $consumerSecret = ''; // Fill with your app Secret
 
 //initiae curl
 $headers = ['Content-Type:application/json; charset=utf8'];
 
-$url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+$url = '';//Enter your sandbox app url
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
